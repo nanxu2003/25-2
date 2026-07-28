@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGIXPRESS TRADE PRIVATE LIMITED | Leading IoT & Digital Solutions Provider</title>
+    <meta name="description" content="DIGIXPRESS TRADE PRIVATE LIMITED specialises in IoT technology, delivering end-to-end solutions from sensor hardware to cloud analytics for businesses across the UK.">
+    
+    <!-- 引入 Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 引入 FontAwesome 圖標庫 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- 引入 AOS 動畫庫樣式 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- 配置自定義顏色 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6', // 主色調：翡翠青
+                            600: '#0d9488',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                        accent: {
+                            500: '#f97316', // 強調色：活力橙
+                            600: '#ea580c',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Fine details */
+        body { font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif; }
+        .clip-path-slant {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .hero-bg {
+            background-image: linear-gradient(to right bottom, rgba(13, 148, 136, 0.9), rgba(17, 94, 89, 0.8)), url('https://picsum.photos/seed/iot_hero_uk/1920/1080');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* 視差滾動效果 */
+        }
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- 1. Top Bar (Contact Information) -->
+    <div class="bg-brand-900 text-white text-xs py-2 hidden md:block">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span><i class="fa-solid fa-phone mr-2"></i></span>
+                <span><i class="fa-solid fa-envelope mr-2"></i>contact@digixpresstrade.bond</span>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-accent-500 transition">News & Insights</a>
+                <a href="#" class="hover:text-accent-500 transition">Technical Support</a>
+                <a href="#" class="hover:text-accent-500 transition">Staff Portal</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Navigation Bar (White with Shadow) -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- LOGO -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white text-xl transform group-hover:rotate-12 transition-transform">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold text-slate-800 tracking-tight leading-none">DIGIXPRESS TRADE</h1>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden lg:flex space-x-8 font-medium text-slate-600">
+                <a href="#home" class="hover:text-brand-600 transition-colors py-2 border-b-2 border-transparent hover:border-brand-600">Home</a>
+                <a href="#products" class="hover:text-brand-600 transition-colors py-2 border-b-2 border-transparent hover:border-brand-600">Products</a>
+                <a href="#solutions" class="hover:text-brand-600 transition-colors py-2 border-b-2 border-transparent hover:border-brand-600">Solutions</a>
+                <a href="#about" class="hover:text-brand-600 transition-colors py-2 border-b-2 border-transparent hover:border-brand-600">About Us</a>
+                <a href="#contact" class="hover:text-brand-600 transition-colors py-2 border-b-2 border-transparent hover:border-brand-600">Contact</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden lg:block">
+                <a href="#contact" class="px-6 py-2.5 bg-brand-600 hover:bg-brand-700 text-white rounded-full font-bold shadow-lg shadow-brand-500/30 transition-all transform hover:scale-105">
+                    Request Free Consultation
+                </a>
+            </div>
+
+            <!-- Mobile Menu Btn -->
+            <button class="lg:hidden text-2xl text-slate-700">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- 3. Hero 區域 (漸變疊加+視差) -->
+    <section id="home" class="hero-bg min-h-[600px] md:h-[85vh] flex items-center relative clip-path-slant pb-20">
+        <div class="container mx-auto px-6 relative z-10 text-white">
+            <div class="max-w-3xl" data-aos="fade-up">
+                <div class="inline-block px-4 py-1 border border-white/30 rounded-full bg-white/10 backdrop-blur mb-6 text-sm font-medium">
+                    ✨ Empowering Connected Intelligence · Shaping Digital Futures
+                </div>
+                <h1 class="text-6xl md:text-8xl font-extrabold leading-tight mb-4 text-accent-500">
+                    DIGIXPRESS TRADE PRIVATE LIMITED
+                </h1>
+                <h2 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+                    Making Every Connection<br>Drive<span class="text-accent-500"> Business Value</span>
+                </h2>
+                <p class="text-lg md:text-xl text-brand-50 mb-10 leading-relaxed max-w-2xl">
+                    DIGIXPRESS TRADE PRIVATE LIMITED delivers comprehensive end-to-end IoT solutions for enterprises across the United Kingdom.
+                    From edge sensing to cloud-based decision-making, we help you build a smarter, more connected future.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#solutions" class="px-8 py-4 bg-white text-brand-600 font-bold rounded-lg shadow-xl hover:bg-slate-100 transition-colors text-center">
+                        Explore Industry Solutions
+                    </a>
+                    <a href="#contact" class="px-8 py-4 bg-accent-500 text-white font-bold rounded-lg shadow-xl hover:bg-accent-600 transition-colors text-center flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-play"></i> Book a Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 裝飾性波浪 -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180">
+            <svg class="relative block w-[calc(100%+1.3px)] h-[60px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="fill-slate-50"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- 4. Partners & Technology Support Logobar -->
+    <section class="py-10 bg-slate-50 border-b border-slate-200">
+        <div class="container mx-auto px-6">
+            <p class="text-center text-slate-400 text-sm font-bold uppercase tracking-wider mb-8">Technology Ecosystem Partners</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Simulated Logos -->
+                <div class="text-2xl font-bold flex items-center gap-2 text-slate-700"><i class="fa-brands fa-aws text-orange-500"></i> AWS IoT</div>
+                <div class="text-2xl font-bold flex items-center gap-2 text-slate-700"><i class="fa-brands fa-google text-blue-500"></i> Cloud</div>
+                <div class="text-2xl font-bold flex items-center gap-2 text-slate-700"><i class="fa-solid fa-microchip text-brand-600"></i> ARM</div>
+                <div class="text-2xl font-bold flex items-center gap-2 text-slate-700"><i class="fa-brands fa-docker text-blue-600"></i> Docker</div>
+                <div class="text-2xl font-bold flex items-center gap-2 text-slate-700"><i class="fa-solid fa-satellite-dish text-purple-600"></i> 5G Link</div>
+                <div class="text-2xl font-bold flex items-center gap-2 text-slate-700"><i class="fa-brands fa-microsoft text-blue-700"></i> Azure</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. About Section (Left Image, Right Text) -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2 relative" data-aos="fade-right">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-brand-100 rounded-full z-0"></div>
+                    <img src="https://picsum.photos/seed/office_uk/800/600" alt="About DIGIXPRESS TRADE" class="relative z-10 rounded-2xl shadow-2xl">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg z-20 border-l-4 border-brand-500 hidden md:block">
+                        <p class="text-brand-600 font-bold text-4xl">8+ Years</p>
+                        <p class="text-slate-500 text-sm">Industry Expertise</p>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2" data-aos="fade-left">
+                    <h3 class="text-brand-600 font-bold uppercase tracking-widest mb-2">About DIGIXPRESS TRADE PRIVATE LIMITED</h3>
+                    <h2 class="text-4xl font-bold text-slate-800 mb-6">Bridging the Physical World and Digital Futures</h2>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        DIGIXPRESS TRADE PRIVATE LIMITED is a UK-based high-tech enterprise specialising in Internet of Things (IoT) technology research, development, and application.
+                        We believe that the true value of data lies in its flow and computation.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        Through our independently developed edge gateways and cloud platforms, we help traditional sectors—including manufacturing, agriculture, and logistics—break down information silos, achieve device interconnectivity, and data integration,
+                        providing a robust technological foundation for your digital transformation journey.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded bg-brand-50 flex items-center justify-center text-brand-600 shrink-0">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">In-House R&D</h4>
+                                <p class="text-sm text-slate-500">Core intellectual property</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded bg-brand-50 flex items-center justify-center text-brand-600 shrink-0">
+                                <i class="fa-solid fa-users-gear"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Expert Team</h4>
+                                <p class="text-sm text-slate-500">Full-stack engineering support</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded bg-brand-50 flex items-center justify-center text-brand-600 shrink-0">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">ISO Certified</h4>
+                                <p class="text-sm text-slate-500">Quality management standards</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded bg-brand-50 flex items-center justify-center text-brand-600 shrink-0">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">UK Support</h4>
+                                <p class="text-sm text-slate-500">Local technical assistance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Core Value Cards (Grid) -->
+    <section class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">Why Choose Us?</h2>
+                <p class="text-slate-500">In this era of interconnected everything, we provide not just hardware, but a complete loop from sensing to decision-making.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover-lift transition-all border border-slate-100 group" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-500 text-2xl mb-6 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Rapid Deployment</h3>
+                    <p class="text-slate-500 leading-relaxed">
+                        Utilising modular design and low-code platforms, we reduce traditional IoT project implementation cycles from months to weeks, ensuring faster return on investment.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover-lift transition-all border border-slate-100 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center text-green-500 text-2xl mb-6 group-hover:bg-green-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Data Security</h3>
+                    <p class="text-slate-500 leading-relaxed">
+                        Bank-grade encryption for data transmission, with support for private cloud deployment, ensuring your core business data remains entirely in your control.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover-lift transition-all border border-slate-100 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center text-purple-500 text-2xl mb-6 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-infinity"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">High Scalability</h3>
+                    <p class="text-slate-500 leading-relaxed">
+                        Compatible with over 95% of mainstream industrial protocols (Modbus, OPC UA, etc.), with flexible architecture that scales seamlessly as your business grows.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Statistics Bar -->
+    <section class="py-16 bg-brand-800 relative overflow-hidden">
+        <!-- Decorative Background -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <i class="fa-solid fa-network-wired text-9xl absolute -top-10 -left-10 text-white"></i>
+            <i class="fa-solid fa-microchip text-9xl absolute -bottom-10 -right-10 text-white"></i>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+                <div data-aos="zoom-in">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">500+</div>
+                    <div class="text-brand-200 text-sm uppercase tracking-wider">Projects Delivered</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">30+</div>
+                    <div class="text-brand-200 text-sm uppercase tracking-wider">Tech Patents</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">100k+</div>
+                    <div class="text-brand-200 text-sm uppercase tracking-wider">Connected Devices</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">24/7</div>
+                    <div class="text-brand-200 text-sm uppercase tracking-wider">Round-the-Clock Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Solutions Header -->
+    <section id="solutions" class="pt-20 bg-white text-center">
+        <h3 class="text-brand-600 font-bold uppercase tracking-widest mb-2">Our Solutions</h3>
+        <h2 class="text-4xl font-bold text-slate-800">Comprehensive Industry Solutions</h2>
+        <div class="w-20 h-1.5 bg-brand-500 mx-auto mt-6 rounded-full"></div>
+    </section>
+
+    <!-- 9. Solution 1: Smart Factory (Layout A) -->
+    <section class="py-16 bg-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12 group">
+                <div class="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-lg relative" data-aos="fade-right">
+                    <div class="absolute inset-0 bg-brand-900/20 group-hover:bg-transparent transition-all z-10"></div>
+                    <img src="https://picsum.photos/seed/factory_uk/800/500" class="w-full transition-transform duration-700 group-hover:scale-110" alt="Smart Factory">
+                </div>
+                <div class="w-full md:w-1/2" data-aos="fade-left">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="bg-brand-100 text-brand-800 px-3 py-1 rounded-full text-xs font-bold">Industry 4.0</span>
+                        <div class="h-px bg-slate-200 flex-grow"></div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-slate-800 mb-4">Industrial IoT & Smart Manufacturing</h3>
+                    <p class="text-slate-500 mb-6 leading-relaxed">
+                        For discrete manufacturing enterprises, we provide real-time equipment monitoring, OEE efficiency analysis, and predictive maintenance solutions.
+                        We bridge the data pipeline from PLC to ERP, eliminating production blind spots.
+                    </p>
+                    <ul class="space-y-3 mb-8 text-slate-600">
+                        <li class="flex items-center"><i class="fa-solid fa-check-circle text-brand-500 mr-3"></i> Real-time production dashboards</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check-circle text-brand-500 mr-3"></i> Automated energy consumption tracking</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check-circle text-brand-500 mr-3"></i> Machine vision quality inspection</li>
+                    </ul>
+                    <a href="#" class="text-brand-600 font-bold border-b-2 border-brand-200 hover:border-brand-600 transition-colors pb-1">View Case Study</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Solution 2: Smart Agriculture (Layout B) -->
+    <section class="py-16 bg-slate-50 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12 group">
+                <div class="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-lg relative" data-aos="fade-left">
+                    <div class="absolute inset-0 bg-green-900/20 group-hover:bg-transparent transition-all z-10"></div>
+                    <img src="https://picsum.photos/seed/farm_uk/800/500" class="w-full transition-transform duration-700 group-hover:scale-110" alt="Smart Agriculture">
+                </div>
+                <div class="w-full md:w-1/2" data-aos="fade-right">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold">Smart Agri</span>
+                        <div class="h-px bg-slate-200 flex-grow"></div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-slate-800 mb-4">Precision Agriculture & Environmental Monitoring</h3>
+                    <p class="text-slate-500 mb-6 leading-relaxed">
+                        Utilising various environmental sensors (temperature, humidity, soil pH, light levels), combined with automated irrigation control systems,
+                        we enable scientific crop cultivation and precision management, significantly reducing labour costs.
+                    </p>
+                    <ul class="space-y-3 mb-8 text-slate-600">
+                        <li class="flex items-center"><i class="fa-solid fa-check-circle text-green-500 mr-3"></i> Automated greenhouse climate control</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check-circle text-green-500 mr-3"></i> Smart fertigation irrigation systems</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check-circle text-green-500 mr-3"></i> Agricultural produce traceability</li>
+                    </ul>
+                    <a href="#" class="text-brand-600 font-bold border-b-2 border-brand-200 hover:border-brand-600 transition-colors pb-1">View Case Study</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Solution 3: Smart Campus (Layout A) -->
+    <section class="py-16 bg-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12 group">
+                <div class="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-lg relative" data-aos="fade-right">
+                    <div class="absolute inset-0 bg-blue-900/20 group-hover:bg-transparent transition-all z-10"></div>
+                    <img src="https://picsum.photos/seed/campus_uk/800/500" class="w-full transition-transform duration-700 group-hover:scale-110" alt="Smart Campus">
+                </div>
+                <div class="w-full md:w-1/2" data-aos="fade-left">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold">IoT Campus</span>
+                        <div class="h-px bg-slate-200 flex-grow"></div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-slate-800 mb-4">Smart Campus & Building Management</h3>
+                    <p class="text-slate-500 mb-6 leading-relaxed">
+                        Integrating security, fire safety, lighting, and energy management systems to create green, safe, and efficient modern campuses.
+                        Supports digital twin dashboard displays, managing the entire campus from a single interface.
+                    </p>
+                    <ul class="space-y-3 mb-8 text-slate-600">
+                        <li class="flex items-center"><i class="fa-solid fa-check-circle text-blue-500 mr-3"></i> Remote smart meter reading</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check-circle text-blue-500 mr-3"></i> Intelligent parking guidance</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check-circle text-blue-500 mr-3"></i> Perimeter intrusion detection</li>
+                    </ul>
+                    <a href="#" class="text-brand-600 font-bold border-b-2 border-brand-200 hover:border-brand-600 transition-colors pb-1">View Case Study</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Hardware Products Showcase -->
+    <section id="products" class="py-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Core Hardware Products</h2>
+                <p class="text-slate-400">Independently developed, edge intelligence, stable and reliable</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-brand-500 transition-all group">
+                    <div class="h-48 bg-slate-700 flex items-center justify-center relative overflow-hidden">
+                         <!-- Simulated Product Image -->
+                        <div class="w-32 h-20 border-2 border-brand-400 rounded-lg relative z-10 bg-slate-800 shadow-[0_0_20px_rgba(20,184,166,0.3)] group-hover:scale-110 transition-transform flex items-center justify-center text-xs text-brand-400">
+                            ZN-Gateway Pro
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-800 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Industrial Edge Computing Gateway</h3>
+                        <p class="text-sm text-slate-400 mb-4">Supports Modbus/PLC protocol parsing, built-in Python runtime, supports breakpoint resume transmission.</p>
+                        <button class="w-full py-2 border border-slate-600 rounded hover:bg-brand-600 hover:border-brand-600 transition-colors">View Specifications</button>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-brand-500 transition-all group">
+                    <div class="h-48 bg-slate-700 flex items-center justify-center relative overflow-hidden">
+                        <div class="w-16 h-24 border-2 border-brand-400 rounded-lg relative z-10 bg-slate-800 shadow-[0_0_20px_rgba(20,184,166,0.3)] group-hover:scale-110 transition-transform flex items-center justify-center text-xs text-brand-400">
+                            DTU 4G
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-800 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">4G Cat.1 Data Terminal</h3>
+                        <p class="text-sm text-slate-400 mb-4">Low-power design, suitable for environments without broadband network, widely used in water conservancy and environmental monitoring.</p>
+                        <button class="w-full py-2 border border-slate-600 rounded hover:bg-brand-600 hover:border-brand-600 transition-colors">View Specifications</button>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-brand-500 transition-all group">
+                    <div class="h-48 bg-slate-700 flex items-center justify-center relative overflow-hidden">
+                        <div class="w-24 h-24 rounded-full border-2 border-brand-400 relative z-10 bg-slate-800 shadow-[0_0_20px_rgba(20,184,166,0.3)] group-hover:scale-110 transition-transform flex items-center justify-center text-xs text-brand-400">
+                            Sensor Hub
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-800 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Wireless Sensor Node</h3>
+                        <p class="text-sm text-slate-400 mb-4">LoRaWAN/NB-IoT protocol, battery-powered with 3+ years lifespan, IP67 waterproof rating.</p>
+                        <button class="w-full py-2 border border-slate-600 rounded hover:bg-brand-600 hover:border-brand-600 transition-colors">View Specifications</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Technology Stack (Icon Cloud) -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-center text-2xl font-bold text-slate-800 mb-12">Full-Stack Technical Capabilities</h2>
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-8 text-center">
+                <div class="p-4 rounded-lg bg-slate-50 hover:bg-slate-100 transition">
+                    <i class="fa-brands fa-python text-4xl text-yellow-500 mb-2"></i>
+                    <div class="text-sm font-bold text-slate-600">Python</div>
+                </div>
+                <div class="p-4 rounded-lg bg-slate-50 hover:bg-slate-100 transition">
+                    <i class="fa-brands fa-golang text-4xl text-cyan-500 mb-2"></i>
+                    <div class="text-sm font-bold text-slate-600">GoLang</div>
+                </div>
+                <div class="p-4 rounded-lg bg-slate-50 hover:bg-slate-100 transition">
+                    <i class="fa-brands fa-vuejs text-4xl text-green-500 mb-2"></i>
+                    <div class="text-sm font-bold text-slate-600">Vue.js</div>
+                </div>
+                <div class="p-4 rounded-lg bg-slate-50 hover:bg-slate-100 transition">
+                    <i class="fa-solid fa-database text-4xl text-blue-500 mb-2"></i>
+                    <div class="text-sm font-bold text-slate-600">InfluxDB</div>
+                </div>
+                <div class="p-4 rounded-lg bg-slate-50 hover:bg-slate-100 transition">
+                    <i class="fa-solid fa-server text-4xl text-slate-700 mb-2"></i>
+                    <div class="text-sm font-bold text-slate-600">Linux</div>
+                </div>
+                <div class="p-4 rounded-lg bg-slate-50 hover:bg-slate-100 transition">
+                    <i class="fa-solid fa-microchip text-4xl text-red-500 mb-2"></i>
+                    <div class="text-sm font-bold text-slate-600">STM32</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. Customer Testimonials (Carousel Layout) -->
+    <section class="py-20 bg-brand-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-slate-800 mb-12">Client Testimonials</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-brand-100 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-brand-100 absolute top-4 left-4"></i>
+                    <p class="text-slate-600 italic mb-6 relative z-10 pl-4">
+                        "Their technical team was exceptionally professional. They not only solved our data collection challenges with legacy equipment,
+                        but also customised a highly intuitive management dashboard. Now our leadership team can monitor production progress anytime, anywhere."
+                    </p>
+                    <div class="flex items-center gap-4 border-t pt-4">
+                        <img src="https://picsum.photos/seed/user1_uk/50/50" class="rounded-full w-12 h-12" alt="User">
+                        <div>
+                            <div class="font-bold text-slate-800">James Richardson</div>
+                            <div class="text-xs text-slate-500">Managing Director, Automotive Components Manufacturing Ltd</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-brand-100 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-brand-100 absolute top-4 left-4"></i>
+                    <p class="text-slate-600 italic mb-6 relative z-10 pl-4">
+                        "The smart agriculture project has improved our greenhouse management efficiency by 50%. The sensors are incredibly reliable,
+                        and the app alert functionality is brilliant. We no longer worry about sudden temperature drops damaging our crops overnight."
+                    </p>
+                    <div class="flex items-center gap-4 border-t pt-4">
+                        <img src="https://picsum.photos/seed/user2_uk/50/50" class="rounded-full w-12 h-12" alt="User">
+                        <div>
+                            <div class="font-bold text-slate-800">Sarah Mitchell</div>
+                            <div class="text-xs text-slate-500">Farm Manager, Green Valley Agricultural Demo Site</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. Service Process (Step Line) -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-center text-3xl font-bold text-slate-800 mb-16">Our Service Process</h2>
+            <div class="relative flex flex-col md:flex-row justify-between items-center gap-8">
+                <!-- Line -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-slate-100 -z-0"></div>
+                
+                <!-- Steps -->
+                <div class="bg-white p-4 relative z-10 text-center" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-16 h-16 bg-brand-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-lg shadow-brand-500/30">1</div>
+                    <h4 class="font-bold text-slate-800">Requirements Consultation</h4>
+                    <p class="text-xs text-slate-500 mt-2">On-site survey & pain point analysis</p>
+                </div>
+                <div class="bg-white p-4 relative z-10 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-white border-2 border-brand-500 text-brand-500 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+                    <h4 class="font-bold text-slate-800">Solution Design</h4>
+                    <p class="text-xs text-slate-500 mt-2">Architecture blueprint & prototype approval</p>
+                </div>
+                <div class="bg-white p-4 relative z-10 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-white border-2 border-brand-500 text-brand-500 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+                    <h4 class="font-bold text-slate-800">System Development</h4>
+                    <p class="text-xs text-slate-500 mt-2">Hardware-software integration & testing</p>
+                </div>
+                <div class="bg-white p-4 relative z-10 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-white border-2 border-brand-500 text-brand-500 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+                    <h4 class="font-bold text-slate-800">Deployment & Delivery</h4>
+                    <p class="text-xs text-slate-500 mt-2">On-site implementation & training</p>
+                </div>
+                <div class="bg-white p-4 relative z-10 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-white border-2 border-brand-500 text-brand-500 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">5</div>
+                    <h4 class="font-bold text-slate-800">Ongoing Support</h4>
+                    <p class="text-xs text-slate-500 mt-2">24/7 technical assistance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 16. FAQ - Frequently Asked Questions -->
+    <section class="py-16 bg-slate-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center text-slate-800 mb-10">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="bg-white rounded-lg shadow-sm group">
+                    <summary class="p-6 cursor-pointer font-bold text-slate-700 list-none flex justify-between items-center hover:text-brand-600">
+                        How long does it take to implement an IoT solution?
+                        <span class="text-brand-500 transition-transform group-open:rotate-180"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="p-6 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-4">
+                        This depends on the complexity of the project. Standardised data acquisition and monitoring systems are typically deployed within 1-2 weeks. For larger projects involving customised development, the timeline is usually 1-3 months. We provide a detailed project schedule during the requirements gathering phase.
+                    </div>
+                </details>
+                <details class="bg-white rounded-lg shadow-sm group">
+                    <summary class="p-6 cursor-pointer font-bold text-slate-700 list-none flex justify-between items-center hover:text-brand-600">
+                        Can your equipment be used if there's no broadband network on-site?
+                        <span class="text-brand-500 transition-transform group-open:rotate-180"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="p-6 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-4">
+                        Absolutely. Our gateway devices support 4G/5G full-network modules. For remote areas or scenarios where cabling is difficult, we can also utilise LoRa or NB-IoT low-power wide-area network technologies for wireless transmission.
+                    </div>
+                </details>
+                <details class="bg-white rounded-lg shadow-sm group">
+                    <summary class="p-6 cursor-pointer font-bold text-slate-700 list-none flex justify-between items-center hover:text-brand-600">
+                        Do you provide after-sales support?
+                        <span class="text-brand-500 transition-transform group-open:rotate-180"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="p-6 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-4">
+                        We offer a 1-year free warranty and remote technical support. After the warranty period expires, you can opt to sign a maintenance service contract to enjoy regular inspections, software upgrades, and priority fault resolution services.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 17. Visual CTA Section -->
+    <section class="py-24 bg-brand-900 relative overflow-hidden flex items-center justify-center text-center">
+        <img src="https://picsum.photos/seed/code_uk/1920/600" alt="CTA BG" class="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay">
+        <div class="relative z-10 container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p class="text-brand-100 text-lg mb-8 max-w-2xl mx-auto">
+                Connect with our IoT specialists for a complimentary consultation and bespoke solution proposal.
+            </p>
+            <a href="#contact" class="px-10 py-4 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-full shadow-2xl transition-transform hover:-translate-y-1 inline-block">
+                Start Your Project Today
+            </a>
+        </div>
+    </section>
+
+    <!-- 18. Contact Us & Map Layout -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12 bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
+                <!-- Left: Contact Form -->
+                <div class="w-full md:w-1/2 p-8 md:p-12">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6">Send Us a Message</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Full Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition" placeholder="Your name">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2">Phone</label>
+                                <input type="tel" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition" placeholder="Your contact number">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition" placeholder="Your email address">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Project Requirements</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition" placeholder="Please briefly describe your project requirements..."></textarea>
+                        </div>
+                        <button type="button" onclick="alert('Thank you for your submission. We will contact you shortly!')" class="w-full py-4 bg-brand-800 text-white font-bold rounded-lg hover:bg-brand-900 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+    
+                <!-- Right: Contact Information (Dark Background) -->
+                <div class="w-full md:w-1/2 bg-slate-900 text-white p-8 md:p-12 flex flex-col justify-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-500 rounded-full blur-3xl opacity-20 -mr-20 -mt-20"></div>
+                        
+                    <h3 class="text-2xl font-bold mb-8 relative z-10">Contact Information</h3>
+                    <div class="space-y-8 relative z-10">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded bg-white/10 flex items-center justify-center text-brand-400 shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Office Address</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    Office No 206, 1st Floor Gambhir Industrial Estate Off Aarey Road Opp Paramount Print, Goregaon East, 9182279306
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded bg-white/10 flex items-center justify-center text-brand-400 shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email Address</h4>
+                                <p class="text-slate-400 text-sm">contact@digixpresstrade.bond</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded bg-white/10 flex items-center justify-center text-brand-400 shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Telephone</h4>
+                                <p class="text-slate-400 text-sm text-2xl font-mono"></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Simple Map Placeholder (Image Substitute) -->
+                    <div class="mt-8 rounded-lg overflow-hidden h-40 border border-slate-700 relative group">
+                        <img src="https://picsum.photos/seed/map_uk/600/300" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" alt="Map">
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <span class="bg-black/70 px-4 py-1 rounded text-xs">View Map & Directions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 19. Footer -->
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-brand-600 rounded flex items-center justify-center text-white text-sm">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <span class="text-xl font-bold text-slate-800">DIGIXPRESS TRADE PRIVATE LIMITED</span>
+                    </div>
+                    <p class="text-slate-500 text-sm mb-6 leading-relaxed">
+                        Specialising in IoT technology R&D, providing enterprises with reliable Industrial Internet and digital transformation solutions.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-brand-500 hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-brand-500 hover:text-white transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-brand-500 hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="font-bold text-slate-800 mb-6">Solutions</h4>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li><a href="#" class="hover:text-brand-600 transition">Industrial Internet</a></li>
+                        <li><a href="#" class="hover:text-brand-600 transition">Smart Cities</a></li>
+                        <li><a href="#" class="hover:text-brand-600 transition">Smart Agriculture</a></li>
+                        <li><a href="#" class="hover:text-brand-600 transition">Energy Management</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-800 mb-6">Company</h4>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li><a href="#" class="hover:text-brand-600 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-brand-600 transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-brand-600 transition">News & Insights</a></li>
+                        <li><a href="#" class="hover:text-brand-600 transition">Partners</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Footer -->
+                <div>
+                    <h4 class="font-bold text-slate-800 mb-6">Newsletter Subscription</h4>
+                    <p class="text-xs text-slate-500 mb-4">Receive the latest industry whitepapers and technical updates</p>
+                    <div class="flex">
+                        <input type="text" placeholder="Your email" class="bg-slate-50 border border-slate-200 rounded-l px-3 py-2 text-sm w-full focus:outline-none focus:border-brand-500">
+                        <button class="bg-brand-600 text-white px-4 py-2 rounded-r hover:bg-brand-700 text-sm font-bold">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400">
+                <p>&copy; 2024 DIGIXPRESS TRADE PRIVATE LIMITED. All rights reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-brand-600">Privacy Policy</a>
+                    <a href="#" class="hover:text-brand-600">Terms of Service</a>
+                    <a href="#" class="hover:text-brand-600">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Init Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
